@@ -9,3 +9,9 @@ const searchboxInput = document.querySelector('[id="search-box"]');
 const infoContainer = document.querySelector('.country-info');
 
 
+searchboxInput.addEventListener('input', debounce(() => {
+fetchCountries(searchboxInput.value)
+        .then(showCountry)
+        .catch(error => showError(error));
+  }, DEBOUNCE_DELAY)
+);
