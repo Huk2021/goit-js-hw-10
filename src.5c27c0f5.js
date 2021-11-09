@@ -10,6 +10,6 @@ var t,o=arguments[3];!function(o,i){"function"==typeof t&&t.amd?t([],function(){
 },{}],"SvwL":[function(require,module,exports) {
 "use strict";function e(e){return fetch(`https://restcountries.com/v3.1/name/${e}?fields=name,capital,population,flag,languages`).then(e=>{if(!e.ok)throw Error(e.statusText);return e.json()})}Object.defineProperty(exports,"__esModule",{value:!0}),exports.fetchCountries=e;
 },{}],"Focm":[function(require,module,exports) {
-"use strict";require("./css/styles.css");var e=t(require("lodash.debounce")),r=require("notiflix/build/notiflix-notify-aio"),o=require("./fetchCountries");function t(e){return e&&e.__esModule?e:{default:e}}const u=300,i=document.querySelector('[id="search-box"]'),c=document.querySelector(".country-info");
+"use strict";require("./css/styles.css");var e=o(require("lodash.debounce")),t=require("notiflix/build/notiflix-notify-aio"),r=require("./fetchCountries");function o(e){return e&&e.__esModule?e:{default:e}}const u=300,i=document.querySelector('[id="search-box"]'),n=document.querySelector(".country-info");i.addEventListener("input",(0,e.default)(()=>{(0,r.fetchCountries)(i.value).then(showCountry).catch(e=>showError(e))},300));
 },{"./css/styles.css":"krre","lodash.debounce":"PZFh","notiflix/build/notiflix-notify-aio":"MeeU","./fetchCountries":"SvwL"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-10/src.b6b852a5.js.map
+//# sourceMappingURL=/goit-js-hw-10/src.5c27c0f5.js.map
