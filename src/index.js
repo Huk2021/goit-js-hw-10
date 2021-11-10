@@ -51,11 +51,10 @@ function infoCountry([{ name, flags, capital, population, languages }]) {
        <p class = "info"> Capital: <span class = "info-span">${capital}</span></p>
        <p class = "info"> Population: <span class = "info-span">${population}</span></p>
        <p class = "info"> Languages: <span class = "info-span">${Object.values(languages)
-            .join('')}
+        .join('')}
         </span></p>`;
    
  }
-
 
 function showError(error) {
     Notify.failure('Oops, there is no country with that name')
