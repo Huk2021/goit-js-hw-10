@@ -38,7 +38,7 @@ function listCountry(country) {
     .map(({ flags, name }) => {
         return `<li class="country-list"> 
       <img class="flag-list" src ="${flags.svg}" alt="Flag of ${name.common}"  width="50"/>
-      <span class = "name__list">${name.common}</span></li>`;
+      <span class = "name-list">${name.common}</span></li>`;
     })
     .join('');
    listContainer.innerHTML = markup;
@@ -48,9 +48,9 @@ function listCountry(country) {
 function infoCountry([{ name, flags, capital, population, languages }]) {
     infoContainer.innerHTML = `<img src ="${flags.svg}" class="flags"  alt="Flag of ${name.official}" width="50"/>
          <span class="country-name">${name.official}</span>
-       <p> Capital: <span>${capital}</span></p>
-       <p> Population: <span>${population}</span></p>
-       <p> Languages: <span>${Object.values(languages)
+       <p class = "info"> Capital: <span class = "info-span">${capital}</span></p>
+       <p class = "info"> Population: <span class = "info-span">${population}</span></p>
+       <p class = "info"> Languages: <span class = "info-span">${Object.values(languages)
             .join('')}
         </span></p>`;
    
