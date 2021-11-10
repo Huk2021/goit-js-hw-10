@@ -18,13 +18,13 @@ function showCountry() {
       listContainer.innerHTML = '';
 
          if (country.length > 10) {
-             return Notify.info('Too many matches found. Please enter a more specific name.');
+            Notify.info('Too many matches found. Please enter a more specific name.');
          }
          else if (country.length >= 2 && country.length <= 10) {
-             return listCountry(country);
+            listCountry(country);
          }
          else if (country.length === 1) {
-             infoCountry(country);
+            infoCountry(country);
        
          }
         
